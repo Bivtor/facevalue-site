@@ -91,9 +91,14 @@
 	<ul>
 		<li>Your toggle settings (titles on/off, thumbnails on/off, hide Shorts).</li>
 		<li>Your channel exceptions list.</li>
-		<li>A local counter of titles cleaned.</li>
+		<li>A local tally of titles cleaned, kept as an offline fallback for the popup&rsquo;s counter.</li>
 	</ul>
 	<p>Uninstalling the extension deletes all of it.</p>
+	<p>
+		The counter shown in the popup is the global total of titles cleaned across all users.
+		The popup fetches that single aggregate number from our API when opened; the request
+		carries no data about you.
+	</p>
 
 	<h2>Third-party services</h2>
 	<p>

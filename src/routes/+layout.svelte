@@ -20,6 +20,7 @@
 		<nav class="flex items-center gap-4 font-mono text-xs text-mut sm:gap-6">
 			<a href="/#how" class="hidden transition-colors hover:text-fg sm:inline">how it works</a>
 			<a href="/privacy" class="transition-colors hover:text-fg">privacy</a>
+			<a href={LINKS.github} class="hidden transition-colors hover:text-fg sm:inline">source</a>
 			<a href="/#get" class="rounded-full border border-hair px-4 py-1.5 text-fg transition-colors hover:border-accent">get the extension</a>
 		</nav>
 	</header>
@@ -37,9 +38,6 @@
 				<a href={LINKS.contact} class="transition-colors hover:text-fg">contact</a>
 			</div>
 		</div>
-		<p class="mt-4 max-w-xl leading-relaxed">
-			No analytics, no trackers, no cookies. On the extension or on this site. Take it at face
-			value.
-		</p>
+		<p class="mt-4 max-w-xl leading-relaxed">See things at Face Value.</p>
 	</footer>
 </div>

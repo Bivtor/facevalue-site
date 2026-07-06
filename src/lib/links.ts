@@ -4,7 +4,7 @@ export const LINKS = {
 	chrome: '#',
 	firefox: '#',
 	edge: '#',
-	github: '#',
+	github: 'https://github.com/Bivtor/yt-clickbait-remover',
 	donate: '#',
 	contact: 'mailto:contact@carpinteriacws.com'
 } as const;
