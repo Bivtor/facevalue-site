@@ -1,0 +1,66 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+
+/* Self-hosted fonts (same latin woff2 subsets the extension ships) — the site, like
+   the extension, makes zero third-party requests. */
+@font-face { font-family: 'Hanken Grotesk'; font-style: normal; font-weight: 400; font-display: swap; src: url('/fonts/hanken-400.woff2') format('woff2'); }
+@font-face { font-family: 'Hanken Grotesk'; font-style: normal; font-weight: 500; font-display: swap; src: url('/fonts/hanken-500.woff2') format('woff2'); }
+@font-face { font-family: 'Hanken Grotesk'; font-style: normal; font-weight: 600; font-display: swap; src: url('/fonts/hanken-600.woff2') format('woff2'); }
+@font-face { font-family: 'Hanken Grotesk'; font-style: normal; font-weight: 700; font-display: swap; src: url('/fonts/hanken-700.woff2') format('woff2'); }
+@font-face { font-family: 'JetBrains Mono'; font-style: normal; font-weight: 400; font-display: swap; src: url('/fonts/jetbrains-400.woff2') format('woff2'); }
+@font-face { font-family: 'JetBrains Mono'; font-style: normal; font-weight: 500; font-display: swap; src: url('/fonts/jetbrains-500.woff2') format('woff2'); }
+@font-face { font-family: 'Newsreader'; font-style: normal; font-weight: 400; font-display: swap; src: url('/fonts/newsreader-400.woff2') format('woff2'); }
+@font-face { font-family: 'Newsreader'; font-style: normal; font-weight: 500; font-display: swap; src: url('/fonts/newsreader-500.woff2') format('woff2'); }
+
+/* Face Value brand board v3 — dark / editorial */
+@theme {
+  --color-ink: #0f0f0f;      /* page background */
+  --color-surface: #141414;  /* raised surface */
+  --color-card: #1c1c1c;     /* cards / mocks */
+  --color-hair: #2a2a2a;     /* hairline borders */
+  --color-fg: #f2f2f2;       /* primary text */
+  --color-mut: #8a8a8a;      /* secondary text */
+  --color-dim: #6b6b6b;      /* tertiary / captions */
+  --color-accent: #e23a2e;   /* the red strike */
+
+  --font-serif: 'Newsreader', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Hanken Grotesk', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-ink);
+  color: var(--color-fg);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* The red strike — draws itself across once on load (hero + demo card). */
+@keyframes strike-in {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+.strike {
+  position: relative;
+  white-space: nowrap;
+}
+.strike::after {
+  content: '';
+  position: absolute;
+  left: -2%;
+  right: -2%;
+  top: 54%;
+  height: 0.08em;
+  min-height: 3px;
+  background: var(--color-accent);
+  border-radius: 2px;
+  transform-origin: left center;
+  animation: strike-in 0.55s cubic-bezier(0.65, 0, 0.35, 1) 0.35s both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .strike::after { animation: none; }
+}
