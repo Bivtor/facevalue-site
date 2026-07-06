@@ -1,18 +1,19 @@
 <script lang="ts">
 	import { LINKS } from '$lib/links';
+	import BeforeAfterGrid from '$lib/components/BeforeAfterGrid.svelte';
 
 	const features = [
 		{
 			name: 'Clean titles',
-			body: 'Every title is rewritten from the video’s actual transcript — what it delivers, not what it dangles.'
+			body: 'Rewritten from the video’s transcript to say what it actually delivers. No caps lock, no curiosity gaps, no promises the content doesn’t keep.'
 		},
 		{
 			name: 'Clean thumbnails',
-			body: 'Juiced thumbnails are swapped for a real frame pulled from the video itself.'
+			body: 'A real frame from the video instead of the engineered reaction shot.'
 		},
 		{
 			name: 'Hide Shorts',
-			body: 'One toggle removes Shorts shelves and reels everywhere on the site.'
+			body: 'One toggle removes Shorts shelves and reels everywhere. The part of the site built purely to keep you scrolling, gone.'
 		},
 		{
 			name: 'Channel exceptions',
@@ -24,17 +25,17 @@
 		{
 			n: '01',
 			title: 'We read the transcript',
-			body: 'When a video first appears in anyone’s feed, our server fetches its public transcript — the actual content, not the packaging.'
+			body: 'When a video first appears in anyone’s feed, our server fetches its public transcript. The actual content, not the packaging.'
 		},
 		{
 			n: '02',
 			title: 'The title is rewritten',
-			body: 'A language model rewrites the title to state plainly what the video is about. No caps-lock, no curiosity gaps, no promises the content doesn’t keep.'
+			body: 'A language model rewrites the title to state plainly what the video is about, based on what is actually said in it.'
 		},
 		{
 			n: '03',
 			title: 'A real frame replaces the thumbnail',
-			body: 'We extract a sharp, representative frame from the video stream itself and show that instead of the engineered thumbnail.'
+			body: 'We pull a sharp, representative frame from the video stream itself and show that instead of the thumbnail.'
 		}
 	];
 
@@ -46,15 +47,15 @@
 </script>
 
 <svelte:head>
-	<title>Face Value — YouTube without the clickbait</title>
+	<title>Face Value | Take your attention back from YouTube</title>
 	<meta
 		name="description"
-		content="A browser extension that rewrites clickbait YouTube titles from the actual transcript and replaces engineered thumbnails with a real frame from the video. No account, no tracking."
+		content="A browser extension that rewrites clickbait YouTube titles from the actual transcript, replaces shock thumbnails with a real frame from the video, and removes Shorts if you want it to."
 	/>
-	<meta property="og:title" content="Face Value — YouTube without the clickbait" />
+	<meta property="og:title" content="Face Value | Take your attention back from YouTube" />
 	<meta
 		property="og:description"
-		content="Titles rewritten from the transcript. Thumbnails replaced with real frames. No account, no tracking."
+		content="Titles rewritten from the transcript. Thumbnails replaced with real frames. Shorts optional. Your feed, described honestly."
 	/>
 	<meta property="og:url" content="https://facethevalue.com" />
 </svelte:head>
@@ -67,8 +68,11 @@
 		<span class="strike">face value.</span>
 	</h1>
 	<p class="mt-8 max-w-xl text-lg leading-relaxed text-mut">
-		Clickbait titles rewritten from the video&rsquo;s <em class="font-serif text-fg">actual transcript</em>.
-		Engineered thumbnails swapped for a real frame from the video. Your feed, described honestly.
+		Every thumbnail on YouTube is a bid for your attention, and the bids keep escalating.
+		Face Value rewrites clickbait titles from the video&rsquo;s
+		<em class="font-serif text-fg">actual transcript</em>, swaps shock thumbnails for a real
+		frame, and removes Shorts if you want it to. You decide what deserves your time, based on
+		what things actually are.
 	</p>
 	<div id="get" class="mt-10 flex flex-wrap items-center gap-3">
 		{#each browsers as b (b.name)}
@@ -79,46 +83,32 @@
 				Add to {b.name}
 			</a>
 		{/each}
-		<span class="font-mono text-xs text-dim">free · no account</span>
 	</div>
 </section>
 
-<!-- ── Before / after ───────────────────────────────────────────────────────── -->
-<section class="grid gap-6 sm:grid-cols-2">
-	<!-- before -->
-	<div class="rounded-2xl border border-hair bg-surface p-5">
-		<p class="mb-4 font-mono text-xs tracking-widest text-dim uppercase">what they publish</p>
-		<div class="overflow-hidden rounded-xl bg-card">
-			<div class="relative flex aspect-video items-center justify-center bg-gradient-to-br from-[#3a1420] via-[#241028] to-[#0c1c30]">
-				<span class="rotate-[-4deg] text-4xl font-bold tracking-tight text-[#ffd83d] drop-shadow-[0_2px_0_rgba(0,0,0,0.6)]">
-					INSANE?!
-				</span>
-				<span class="absolute right-3 bottom-3 rounded bg-black/80 px-1.5 py-0.5 font-mono text-[10px] text-white">14:07</span>
-			</div>
-		</div>
-		<p class="mt-4 leading-snug font-semibold">
-			You Won&rsquo;t BELIEVE What This $30 Gadget Did To My House 😱 (SHOCKING RESULTS)
-		</p>
-		<p class="mt-1 font-mono text-xs text-dim">Some Channel · 1.2M views</p>
-	</div>
+<!-- ── Before / after slider ────────────────────────────────────────────────── -->
+<section>
+	<BeforeAfterGrid />
+</section>
 
-	<!-- after -->
-	<div class="rounded-2xl border border-hair bg-surface p-5">
-		<p class="mb-4 font-mono text-xs tracking-widest text-accent uppercase">what you see</p>
-		<div class="overflow-hidden rounded-xl bg-card">
-			<div class="relative flex aspect-video items-end bg-gradient-to-b from-[#2b2b28] to-[#191917] p-4">
-				<div class="w-full">
-					<div class="mb-2 h-2 w-3/5 rounded bg-white/25"></div>
-					<div class="h-2 w-2/5 rounded bg-white/15"></div>
-				</div>
-				<span class="absolute top-3 left-3 font-mono text-[10px] text-white/40">real frame · 12:41</span>
-				<span class="absolute right-3 bottom-3 rounded bg-black/80 px-1.5 py-0.5 font-mono text-[10px] text-white">14:07</span>
-			</div>
-		</div>
-		<p class="mt-4 leading-snug font-semibold text-fg">
-			Testing a $30 dehumidifier against a hygrometer for a week
+<!-- ── Why ──────────────────────────────────────────────────────────────────── -->
+<section class="mt-28">
+	<h2 class="max-w-2xl font-serif text-4xl leading-tight tracking-tight">
+		This is about your attention, not just bad titles.
+	</h2>
+	<div class="mt-6 grid max-w-3xl gap-5 leading-relaxed text-mut">
+		<p>
+			The shouting isn&rsquo;t a fringe problem anymore. Shocked faces, red arrows, capital
+			letters, promises the video never keeps. Even honest creators making genuinely good work
+			package it this way, because the algorithm rewards whoever grabs hardest. It stopped
+			being a signal of anything.
 		</p>
-		<p class="mt-1 font-mono text-xs text-dim">Some Channel · 1.2M views</p>
+		<p>
+			Face Value takes that lever away. When every title says plainly what a video is, and
+			every thumbnail is just a frame from the video, grabbing stops working. What&rsquo;s left
+			is a feed you can read like a library instead of a slot machine, and an attention span
+			that belongs to you rather than to whoever reacted loudest.
+		</p>
 	</div>
 </section>
 
@@ -147,40 +137,28 @@
 		{/each}
 	</div>
 	<p class="mt-10 max-w-2xl text-sm leading-relaxed text-dim">
-		Results are cached and shared: the first person to see a video pays the few seconds of
-		processing, everyone after gets it instantly. The extension itself never blocks your
-		browsing — cards fill in as answers arrive.
+		Results are cached and shared. The first person to see a video pays a few seconds of
+		processing, everyone after gets it instantly. The extension never blocks your browsing;
+		cards fill in as answers arrive.
 	</p>
 </section>
 
-<!-- ── Privacy ──────────────────────────────────────────────────────────────── -->
-<section class="mt-28 rounded-2xl border border-hair bg-surface p-8 sm:p-10">
-	<h2 class="font-serif text-4xl tracking-tight">Nothing to sell.</h2>
-	<div class="mt-6 grid gap-6 text-sm leading-relaxed text-mut sm:grid-cols-3">
-		<p>
-			<span class="font-semibold text-fg">No account, no user ID.</span> Requests carry nothing
-			that identifies you or links your requests together.
-		</p>
-		<p>
-			<span class="font-semibold text-fg">Only public video metadata leaves your browser</span> —
-			the IDs and titles of videos on pages you view. Settings stay on your machine.
-		</p>
-		<p>
-			<span class="font-semibold text-fg">No analytics, no trackers, no ads.</span> Not restraint —
-			the data to sell doesn&rsquo;t exist.
-		</p>
-	</div>
-	<a href="/privacy" class="mt-8 inline-block font-mono text-xs text-accent hover:underline">
-		read the full privacy policy →
-	</a>
+<!-- ── Privacy note ─────────────────────────────────────────────────────────── -->
+<section class="mt-24 border-t border-hair pt-8">
+	<p class="max-w-2xl text-sm leading-relaxed text-dim">
+		Face Value runs without an account. Requests carry the video ids and titles on pages you
+		view and nothing that identifies you. There is no analytics or tracking code in the
+		extension or on this site.
+		<a href="/privacy" class="text-accent hover:underline">Full privacy policy</a>
+	</p>
 </section>
 
 <!-- ── Donate ───────────────────────────────────────────────────────────────── -->
-<section class="mt-28 text-center">
+<section class="mt-24 text-center">
 	<h2 class="font-serif text-3xl tracking-tight">Free, and it costs us money.</h2>
 	<p class="mx-auto mt-4 max-w-lg text-sm leading-relaxed text-mut">
-		Every title is a language-model call and every thumbnail is real video processing. There are
-		no ads and no data to sell, so servers are paid for the old-fashioned way.
+		Every title is a language model call and every thumbnail is real video processing. There
+		are no ads and nothing is sold, so the servers get paid the old fashioned way.
 	</p>
 	<a
 		href={LINKS.donate}

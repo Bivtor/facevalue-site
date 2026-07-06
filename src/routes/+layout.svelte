@@ -38,7 +38,7 @@
 			</div>
 		</div>
 		<p class="mt-4 max-w-xl leading-relaxed">
-			No analytics, no trackers, no cookies — on the extension or on this site. Take it at face
+			No analytics, no trackers, no cookies. On the extension or on this site. Take it at face
 			value.
 		</p>
 	</footer>

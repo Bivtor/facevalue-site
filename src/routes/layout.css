@@ -1,7 +1,7 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/typography';
 
-/* Self-hosted fonts (same latin woff2 subsets the extension ships) — the site, like
+/* Self-hosted fonts (same latin woff2 subsets the extension ships): the site, like
    the extension, makes zero third-party requests. */
 @font-face { font-family: 'Hanken Grotesk'; font-style: normal; font-weight: 400; font-display: swap; src: url('/fonts/hanken-400.woff2') format('woff2'); }
 @font-face { font-family: 'Hanken Grotesk'; font-style: normal; font-weight: 500; font-display: swap; src: url('/fonts/hanken-500.woff2') format('woff2'); }
@@ -12,7 +12,7 @@
 @font-face { font-family: 'Newsreader'; font-style: normal; font-weight: 400; font-display: swap; src: url('/fonts/newsreader-400.woff2') format('woff2'); }
 @font-face { font-family: 'Newsreader'; font-style: normal; font-weight: 500; font-display: swap; src: url('/fonts/newsreader-500.woff2') format('woff2'); }
 
-/* Face Value brand board v3 — dark / editorial */
+/* Face Value brand board v3: dark / editorial */
 @theme {
   --color-ink: #0f0f0f;      /* page background */
   --color-surface: #141414;  /* raised surface */
@@ -39,7 +39,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* The red strike — draws itself across once on load (hero + demo card). */
+/* The red strike: draws itself across once on load (hero + demo card). */
 @keyframes strike-in {
   from { transform: scaleX(0); }
   to   { transform: scaleX(1); }
