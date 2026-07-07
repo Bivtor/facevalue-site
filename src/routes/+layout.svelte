@@ -2,6 +2,10 @@
 	import './layout.css';
 	import favicon from '$lib/assets/favicon.svg';
 	import { LINKS } from '$lib/links';
+	import { injectAnalytics } from '@vercel/analytics/sveltekit';
+
+	// Vercel Web Analytics: cookieless, aggregate page views only (disclosed in /privacy).
+	injectAnalytics();
 
 	let { children } = $props();
 </script>

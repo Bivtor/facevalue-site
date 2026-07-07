@@ -2,7 +2,7 @@
 	<title>Privacy | Face Value</title>
 	<meta
 		name="description"
-		content="Face Value's privacy policy. No accounts, no user identifiers, no analytics. Only public video metadata leaves your browser."
+		content="Face Value's privacy policy. No accounts, no user identifiers, no tracking. Only public video metadata leaves your browser."
 	/>
 </svelte:head>
 
@@ -30,7 +30,7 @@
 			YouTube pages you view. Nothing else leaves your browser.
 		</li>
 		<li>Your settings are stored locally in your browser and are never transmitted.</li>
-		<li>There is no analytics, advertising, or tracking code in the extension or on this site.</li>
+		<li>There is no analytics, advertising, or tracking code in the extension.</li>
 		<li>No data is sold or shared for marketing.</li>
 	</ul>
 
@@ -120,8 +120,8 @@
 	<p>
 		Your browser talks to exactly two places: youtube.com, which you were already on, and our
 		API/CDN. The extension&rsquo;s fonts and assets are bundled, so it makes no requests to
-		Google Fonts or any other third party. This website is built the same way: fonts
-		self-hosted, no analytics, no third-party requests.
+		Google Fonts or any other third party. This website is built the same way, with fonts
+		self-hosted.
 	</p>
 
 	<h2>What we can and cannot see</h2>

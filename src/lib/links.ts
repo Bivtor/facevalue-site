@@ -1,7 +1,7 @@
 // Single source of truth for external URLs.
 // TODO before launch: fill in the real store listings, repo, and donation URLs.
 export const LINKS = {
-	chrome: '#',
+	chrome: 'https://chromewebstore.google.com/detail/face-value/kogpodijhdpkdnahicgmnncdibiagkge',
 	firefox: '#',
 	edge: '#',
 	github: 'https://github.com/Bivtor/yt-clickbait-remover',
