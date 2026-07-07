@@ -8,7 +8,7 @@
 	<title>Support | Face Value</title>
 	<meta
 		name="description"
-		content="Help keep Face Value running. Every title is a language model call and every thumbnail is real video processing."
+		content="Help keep Face Value running. Donations through GitHub Sponsors pay the monthly server costs."
 	/>
 </svelte:head>
 
@@ -16,9 +16,10 @@
 	<p class="font-mono text-xs tracking-widest text-accent uppercase">support</p>
 	<h1 class="mt-4 font-serif text-5xl tracking-tight">Keep the feed honest.</h1>
 	<p class="mx-auto mt-6 max-w-lg leading-relaxed text-mut">
-		Face Value is free and has no ads, no sponsorships, and nothing to sell. Every rewritten
-		title is a language model call and every thumbnail is real video processing on a real
-		server. Donations are what pay for it.
+		The transcript API, thumbnail proxy data, LLM requests, as well as general hosting cost
+		me every month. To me, this is a small price to pay for winning back the freedom to
+		choose, but Face Value does not make money and donations through GitHub Sponsors are
+		much appreciated.
 	</p>
 	<a
 		href={LINKS.donate}
@@ -26,7 +27,4 @@
 	>
 		Donate
 	</a>
-	<p class="mt-6 font-mono text-xs text-dim">
-		Donations go through GitHub Sponsors. Thank you.
-	</p>
 </section>

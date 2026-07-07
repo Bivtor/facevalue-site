@@ -60,14 +60,14 @@
 </script>
 
 <svelte:head>
-  <title>Face Value | Take your attention back from YouTube</title>
+  <title>Face Value | Clickbait Remover for YouTube</title>
   <meta
     name="description"
     content="Face Value is a clickbait remover for YouTube. Titles are rewritten from the video's actual transcript, thumbnails are replaced with a real frame from the video, and Shorts can be hidden entirely."
   />
   <meta
     property="og:title"
-    content="Face Value | Take your attention back from YouTube"
+    content="Face Value | Clickbait Remover for YouTube"
   />
   <meta
     property="og:description"
@@ -200,7 +200,7 @@
     are much appreciated.
   </p>
   <a
-    href={LINKS.support}
+    href={LINKS.donate}
     class="mt-8 inline-block rounded-full bg-accent px-8 py-3 font-mono text-sm text-white transition-opacity hover:opacity-90"
   >
     Consider donating
