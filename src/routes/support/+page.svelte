@@ -27,6 +27,6 @@
 		Donate
 	</a>
 	<p class="mt-6 font-mono text-xs text-dim">
-		Donation options are being set up. Check back shortly.
+		Donations go through GitHub Sponsors. Thank you.
 	</p>
 </section>

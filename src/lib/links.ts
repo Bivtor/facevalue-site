@@ -6,6 +6,6 @@ export const LINKS = {
 	edge: '#',
 	github: 'https://github.com/Bivtor/yt-clickbait-remover',
 	support: '/support', // internal donations hub (extension popup points here too)
-	donate: '#', // the external payment link, used on /support
+	donate: 'https://github.com/sponsors/Bivtor', // live once Sponsors enrollment is approved
 	contact: 'mailto:contact@carpinteriacws.com'
 } as const;
