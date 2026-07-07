@@ -41,8 +41,8 @@ body {
 
 /* The red strike: draws itself across once on load (hero + demo card). */
 @keyframes strike-in {
-  from { transform: scaleX(0); }
-  to   { transform: scaleX(1); }
+  from { transform: translateY(-50%) scaleX(0); }
+  to   { transform: translateY(-50%) scaleX(1); }
 }
 .strike {
   position: relative;
@@ -53,11 +53,12 @@ body {
   position: absolute;
   left: -2%;
   right: -2%;
-  top: 54%;
+  top: 50%;
   height: 0.08em;
   min-height: 3px;
   background: var(--color-accent);
   border-radius: 2px;
+  transform: translateY(-50%);
   transform-origin: left center;
   animation: strike-in 0.55s cubic-bezier(0.65, 0, 0.35, 1) 0.35s both;
 }
