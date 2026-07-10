@@ -2,7 +2,7 @@
 // TODO before launch: fill in the real store listings, repo, and donation URLs.
 export const LINKS = {
 	chrome: 'https://chromewebstore.google.com/detail/face-value/kogpodijhdpkdnahicgmnncdibiagkge',
-	firefox: '#',
+	firefox: 'https://addons.mozilla.org/addon/face-value/',
 	edge: '#',
 	github: 'https://github.com/Bivtor/yt-clickbait-remover',
 	support: '/support', // internal donations hub (extension popup points here too)
